@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "e2e-testing-pyshiny"
+version = "0.1.0"
+description = ""
+authors = ["Piotr Pasza Storozenko <piotr@appsilon.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+shiny = "^0.8.1"
+faicons = "^0.2.2"
+pytest = "^8.1.1"
+playwright = "^1.42.0"
+pytest-playwright = "^0.4.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

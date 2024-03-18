@@ -1,0 +1,14 @@
+body {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 0; /* Removes default margin */
+  }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2 {
+  font-family: 'Maven Pro', sans-serif;
+}
