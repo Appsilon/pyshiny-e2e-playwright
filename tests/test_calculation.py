@@ -24,7 +24,7 @@ def test_calculation(
     # When I select the calculation type
     calculation_radio = page.get_by_test_id("calculation_inputs").get_by_role("radio", name=calculation_type.value)
     calculation_radio.click()
-    
+
     # And I fill the first and second operands
     first_number_input = page.get_by_test_id("calculation_inputs").get_by_label("Operand 1")
     first_number_input.fill(str(first_operand))

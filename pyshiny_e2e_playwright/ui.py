@@ -10,7 +10,12 @@ def create_app_ui():
             ui.p(
                 "This app demonstrates end-to-end testing in PyShiny. ",
                 ui.br(),
-                "Explore the blog post and source code on GitHub.",
+                "Explore the blog post and ",
+                ui.a(
+                    "source code on GitHub", href="https://github.com/Appsilon/pyshiny-e2e-playwright", target="_blank"
+                ),
+                ".",
+                data_testid="intro",
             ),
         ),
         ui.card(
