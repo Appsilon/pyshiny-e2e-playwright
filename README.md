@@ -1,6 +1,7 @@
 # PyShiny E2E Testing with Playwright
 
 This project demonstrates end-to-end (E2E) testing of a [PyShiny](https://shiny.posit.co/py/) application using [Playwright](https://playwright.dev/python/). It aims to provide a practical example of how to automate testing for a Python-based web app, covering UI interactions and verifying functionality.
+Application deployed on [Connect](https://connect.appsilon.com/pyshiny-e2e-playwright/).
 
 ## Features
 
@@ -29,9 +30,10 @@ cd pyshiny-e2e-playwright
 
 ```bash
 poetry install
+poetry run playwright install
 ```
 
-This command will create a virtual environment and install all required dependencies.
+These commands will create a virtual environment and install all required dependencies.
 
 ### Running the Application
 
