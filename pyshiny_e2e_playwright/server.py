@@ -1,7 +1,7 @@
 import faicons
 from shiny import Inputs, Outputs, Session, reactive, render, ui
 
-from e2e_testing_pyshiny.calculation_type import CalculationType
+from pyshiny_e2e_playwright.calculation_type import CalculationType
 
 
 def app_server(inputs: Inputs, outputs: Outputs, session: Session):

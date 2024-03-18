@@ -1,7 +1,7 @@
 import pytest
 from playwright.sync_api import Page, expect
 
-from e2e_testing_pyshiny.calculation_type import CalculationType
+from pyshiny_e2e_playwright.calculation_type import CalculationType
 
 
 @pytest.mark.parametrize(

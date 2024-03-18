@@ -1,7 +1,7 @@
 from shiny import App, ui
 
-from e2e_testing_pyshiny.server import app_server
-from e2e_testing_pyshiny.ui import create_app_ui
+from pyshiny_e2e_playwright.server import app_server
+from pyshiny_e2e_playwright.ui import create_app_ui
 
 app_ui = create_app_ui()
 google_fonts_tag = ui.TagList(

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "e2e-testing-pyshiny"
+name = "pyshiny-e2e-playwright"
 version = "0.1.0"
 description = ""
 authors = ["Piotr Pasza Storozenko <piotr@appsilon.com>"]

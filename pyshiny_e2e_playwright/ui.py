@@ -1,6 +1,6 @@
 from shiny import ui
 
-from e2e_testing_pyshiny.calculation_type import CalculationType
+from pyshiny_e2e_playwright.calculation_type import CalculationType
 
 
 def create_app_ui():
