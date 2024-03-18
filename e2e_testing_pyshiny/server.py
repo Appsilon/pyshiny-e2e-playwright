@@ -1,38 +1,38 @@
-# server.py
 import faicons
 from shiny import Inputs, Outputs, Session, reactive, render, ui
 
-from e2e_testing_pyshiny.operation import Operation
+from e2e_testing_pyshiny.calculation_type import CalculationType
 
 
 def app_server(inputs: Inputs, outputs: Outputs, session: Session):
     @reactive.Calc
-    def operation_result_num() -> float | int:
-        if Operation(inputs.operation()) == Operation.ADDITION:
-            return inputs.first_number() + inputs.second_number()
-        elif Operation(inputs.operation()) == Operation.SUBTRACTION:
-            return inputs.first_number() - inputs.second_number()
+    def calculate_result_based_on_operation() -> float | int:
+        calculation_type = CalculationType(inputs.calculation_type())
+        if calculation_type == CalculationType.ADDITION:
+            return inputs.first_operand() + inputs.second_operand()
+        elif calculation_type == CalculationType.SUBTRACTION:
+            return inputs.first_operand() - inputs.second_operand()
         else:
-            raise ValueError(f"Unknown operation: {inputs.operation()}")
+            raise ValueError(f"Unsupported operation: {calculation_type}")
 
     @render.ui
-    def operation_result():
+    def calculation_result_display():
         return ui.value_box(
-            "Operation result",
-            operation_result_num(),
-            "change the operation or numbers to see the result",
+            "Calculation Result",
+            calculate_result_based_on_operation(),
+            "Adjust operands or operation to see changes.",
             showcase=faicons.icon_svg("calculator"),
         )
 
     @reactive.Calc
-    def slider_sum() -> int:
-        return sum(range(inputs.slider() + 1))
+    def calculate_sum_of_range() -> int:
+        return sum(range(inputs.range_sum_slider() + 1))
 
     @render.ui
-    def sum_value_box():
+    def range_sum_result_display():
         return ui.value_box(
-            "Sum of numbers from 0 to slider value",
-            slider_sum(),
-            "move the slider to change the value",
+            "Range Sum Result",
+            calculate_sum_of_range(),
+            "Slide to adjust the range.",
             showcase=faicons.icon_svg("sliders"),
         )
