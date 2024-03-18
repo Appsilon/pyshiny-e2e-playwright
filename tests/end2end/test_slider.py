@@ -19,7 +19,8 @@ def test_slider_directly(page: Page, slider_value: int):
     set_slider_value_directly(page, "range_sum_slider", slider_value)
 
     # Then the output should be the sum of numbers from 0 to slider_value
-    expected = sum(range(slider_value + 1))
+    n = slider_value
+    expected = n*(n+1)//2
     expect(page.get_by_test_id("range_sum_result")).to_contain_text(str(expected))
 
 
