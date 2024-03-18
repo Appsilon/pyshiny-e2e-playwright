@@ -1,0 +1,4 @@
+# Requirements file required for Posit Connect
+.
+shiny==0.8.1
+faicons==0.2.2
