@@ -20,22 +20,17 @@ def test_slider_directly(page: Page, slider_value: int):
 
     # Then the output should be the sum of numbers from 0 to slider_value
     n = slider_value
-    expected = n*(n+1)//2
+    expected = n * (n + 1) // 2
     expect(page.get_by_test_id("range_sum_result")).to_contain_text(str(expected))
 
 
-def test_slider_boundaries(page: Page):
+@pytest.mark.parametrize(("slider_value", "expected"), [(0, 0), (100, 5050)])
+def test_slider_boundaries(page: Page, slider_value: int, expected: int):
     # Given the app is open
     page.goto("http://localhost:8000")
 
-    # When I set the slider value to 0
-    set_slider_value_directly(page, "range_sum_slider", 0)
+    # When I set the slider value to slider_value
+    set_slider_value_directly(page, "range_sum_slider", slider_value)
 
-    # Then the output should be 0
-    expect(page.get_by_test_id("range_sum_result")).to_contain_text("0")
-
-    # When I set the slider value to 100
-    set_slider_value_directly(page, "range_sum_slider", 100)
-
-    # Then the output should be 5050
-    expect(page.get_by_test_id("range_sum_result")).to_contain_text("5050")
+    # Then the output should be expected
+    expect(page.get_by_test_id("range_sum_result")).to_contain_text(str(expected))
