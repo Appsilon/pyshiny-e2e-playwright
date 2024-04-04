@@ -31,7 +31,7 @@ def app_server(inputs: Inputs, outputs: Outputs, session: Session):
     @render.ui
     def range_sum_result_display():
         return ui.value_box(
-            "Range Sum Result",
+            "Sum of values from 0 to slider value",
             calculate_sum_of_range(),
             "Slide to adjust the range.",
             showcase=faicons.icon_svg("sliders"),
