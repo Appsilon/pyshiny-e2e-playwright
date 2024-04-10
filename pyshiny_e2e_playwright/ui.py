@@ -52,5 +52,11 @@ def create_app_ui():
                 ),
             ),
         ),
-        ui.card_footer(ui.input_dark_mode(), "By Appsilon with 💙", data_testid="footer"),
+        ui.card_footer(
+            ui.input_dark_mode(),
+            "By ",
+            ui.span("Appsilon", style="color:#0099f9; font-weight:500"),
+            " with 💙",
+            data_testid="footer",
+        ),
     )

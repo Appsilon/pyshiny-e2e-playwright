@@ -1,7 +1,10 @@
 # PyShiny E2E Testing with Playwright
 
+<a href="https://www.appsilon.com/"><img src="images/appsilon_logo.png" width="200"></a>
+
 This project demonstrates end-to-end (E2E) testing of a [PyShiny](https://shiny.posit.co/py/) application using [Playwright](https://playwright.dev/python/). It aims to provide a practical example of how to automate testing for a Python-based web app, covering UI interactions and verifying functionality.
-Application deployed on [Connect](https://connect.appsilon.com/pyshiny-e2e-playwright/).
+
+![App Screenshot](images/app_screenshot.png)
 
 ## Features
 
@@ -54,10 +57,6 @@ poetry run pytest
 ```
 
 Make sure your app is running before executing the tests as they require the app to be accessible.
-
-## License
-
-TODO - Add license
 
 ## Contact
 
